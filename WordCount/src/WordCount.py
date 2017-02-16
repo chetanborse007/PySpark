@@ -64,8 +64,7 @@ def WordCount(**args):
     # Tokenize input
     input = input.flatMap(Tokenizer) \
                  .filter(lambda x: x != None)
-    #input = input.partitionBy(10).cache()
-    input.saveAsTextFile("output/Spark/WordCount")
+    input = input.partitionBy(10).cache()
 
     # Find word frequency
     input = input.reduceByKey(lambda x, y: x + y)
@@ -77,7 +76,7 @@ def WordCount(**args):
     
     # Save output
     input = input.map(lambda x: x[0] + '\t' + x[1])
-    #input.saveAsTextFile(output)
+    input.saveAsTextFile(output)
 
     # Shut down SparkContext
     sc.stop()
