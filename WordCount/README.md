@@ -10,7 +10,7 @@ Note: You can change any parameter set in shell script file and accordingly you 
 
 
 ## MAINTAINER
-   - Name        Chetan Borse
-   - EMail ID    cborse@uncc.edu
-   - LinkedIn    https://www.linkedin.com/in/chetanrborse
+   - Name:        Chetan Borse
+   - EMail ID:    cborse@uncc.edu
+   - LinkedIn:    https://www.linkedin.com/in/chetanrborse
 
