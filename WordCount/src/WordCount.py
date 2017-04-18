@@ -75,7 +75,7 @@ def WordCount(**args):
                          numPartitions=1)
     
     # Save output
-    input = input.map(lambda x: x[0] + '\t' + x[1])
+    input = input.map(lambda x: x[0] + '\t' + str(x[1]))
     input.saveAsTextFile(output)
 
     # Shut down SparkContext
